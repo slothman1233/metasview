@@ -1,0 +1,98 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "useDefineForClassFields": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": false,
+    "rootDir": ".",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true, /* 通过为所有导入创建命名空间对象，实现CommonJS和ES模块之间的互操作性 */
+    // "isolatedModules": true,
+    "skipLibCheck": true /* 跳过声明文件的类型检查. */,
+    "forceConsistentCasingInFileNames": true, /* 不允许对同一文件的大小写不一致的引用 */
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true, // 开启装饰器的使用
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "client/*"
+      ],
+      "comps/*": [
+        "client/components/*"
+      ],
+      "services/*": [
+        "client/services/*"
+      ],
+      "views/*": [
+        "client/views/*"
+      ],
+      "store/*": [
+        "client/store/*"
+      ],
+      "mock/*": [
+        "mock/*"
+      ],
+      "publicommon/*": [
+        "publicommon/*"
+      ]
+    }
+  },
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-decorators-legacy"
+  ],
+  "typeRoots": [
+    "./node_modules/@types/",
+    "./types"
+  ], // 声明文件目录，默认时node_modules/@types
+  //指定一个匹配列表（属于自动指定该路径下的所有ts相关文件）
+  "include": [
+    "vite.config.ts",
+    "config/**/*.ts",
+    "client/**/*.ts",
+    "client/**/*.d.ts",
+    "client/**/*.tsx",
+    "client/**/*.vue",
+    "mock/**/*.ts",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "server.js",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "www.ts",
+    "publicommon/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "gulpfile.js"
+  ]
+}
