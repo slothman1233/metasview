@@ -1,7 +1,9 @@
 <template>
   <div class="layout-header">
     <div class="container header">
-      <a href="/" class="logo"> <img src="/assets/image/logo.png" /></a>
+      <a href="/" class="logo">
+        <img src="/assets/image/logo.png" />
+      </a>
 
       <div class="navlist">
         <a href="/">{{ layout.home }}</a>
@@ -11,7 +13,7 @@
         <a href="/">{{ layout.exposure }}</a>
       </div>
 
-      <div class="user"> {{ layout.loginIn }} </div>
+      <div class="user">{{ layout.loginIn }}</div>
     </div>
   </div>
 </template>
@@ -66,7 +68,7 @@
       line-height: @size;
       a {
         padding: 0 20px;
-        color: #fff;
+        .fade_color(#fff);
         font-size: @font_size_16;
       }
     }
@@ -75,6 +77,8 @@
       line-height: @size;
       padding: 0 20px;
       background-color: @theme_color_1;
+      .lighten_color(@theme_color_1, background-color, 10%);
+      cursor: pointer;
     }
   }
 </style>
