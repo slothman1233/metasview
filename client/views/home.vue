@@ -77,10 +77,3 @@
     },
   });
 </script>
-
-<style lang="less">
-  body {
-    display: flex;
-    // background: url('@{ImgUrl}/logo.png');
-  }
-</style>

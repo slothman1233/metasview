@@ -75,6 +75,7 @@
 
     .user {
       line-height: @size;
+      height: @size;
       padding: 0 20px;
       background-color: @theme_color_1;
       .lighten_color(@theme_color_1, background-color, 10%);

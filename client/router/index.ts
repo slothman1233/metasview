@@ -25,7 +25,7 @@ const routes = [
     children: [
       {
         path: '/index',
-        component: () => import('@/views/index.vue'),
+        component: () => import('@/views/index/index.vue'),
         name: 'Index',
         meta: {
           auth: ['admin', 'test'],

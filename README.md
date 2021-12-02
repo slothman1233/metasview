@@ -24,7 +24,17 @@ npm版本 8.0.0以上
 
 
 命令介绍
+
+
+
 ```bash
+纯vite开发
+npm run vite:dev     -----  运行dev环境
+npm run vite:test  -----  运行test 环境
+npm run vite:pre -----  运行pre 环境
+npm run vite:prod  -----  运行ga 环境
+npm run vite:mock  -----  运行mock数据的环境
+
 http://localhost:2000/
 npm run dev     -----  运行dev环境
 npm run test  -----  运行test 环境

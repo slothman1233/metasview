@@ -1,6 +1,6 @@
-import { reactive, ref, ToRefs, toRefs } from 'vue';
-import { ResponseData } from '@/services/http';
+import { reactive, ToRefs, toRefs } from 'vue';
 import { UnwrapNestedRefs } from '@vue/reactivity';
+import { ResponseData } from 'publicommon/utils/http';
 
 type callbackType<E, F> = (data: E, res: ToRefs<F>) => any;
 
@@ -35,9 +35,8 @@ export default function setupData<E, F, T extends commonObject<any>, U extends c
     if (!res[key]) {
       res[key] = {};
     }
-    staticData = reactive(res);
   }
-
+  staticData = reactive(res);
   const initSetup = () => {
     if (requestFunAry.length) {
       return Promise.all(requestFunAry).then((result: E[] | ResponseData<any>[]) => {

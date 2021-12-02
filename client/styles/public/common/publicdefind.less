@@ -6,7 +6,7 @@
 @footHeight: 50px;
 @headerHeight: 64px;
 
-@font-f: '微软雅黑', '宋体,PingFang SC,Lantinghei SC,Helvetica Neue';
+@font-f: 'Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif';
 @DefindSize: 16px;
 
 //边框颜色
@@ -44,10 +44,10 @@
 
 
 //不透明度
-.fade_color(@color, @lgh: 80%) {
-    color: @color;
+.fade_color(@color,@name: color, @lgh: 80%) {
+    @{name}: @color;
     &:hover {
-        color: fade(@color, @lgh)
+        @{name}: fade(@color, @lgh)
     }
 }
 

@@ -9,6 +9,7 @@ function createLanguage(lang: number) {
       // axios 封装优化
       const $language = (function () {
         let langobj: languageMdoel = cn;
+
         switch (lang) {
           case languageType.cn:
             langobj = cn;
@@ -19,6 +20,7 @@ function createLanguage(lang: number) {
           default:
             break;
         }
+
         //@ts-ignore
         if (!import.meta.env.SSR) {
           window.languageobject = langobj;

@@ -181,6 +181,9 @@ import type { App } from 'vue';
 
 import ElementPlus from 'element-plus';
 
+// 统一导入el-icon图标
+import * as ElIconModules from '@element-plus/icons';
+
 export function setupElementPlus(app: App<Element>): void {
   // 设置语言
   // locale.use(lang)
@@ -191,6 +194,11 @@ export function setupElementPlus(app: App<Element>): void {
   // plugins.forEach((plugin: any) => {
   //   app.use(plugin)
   // })
+
+  // 统一注册el-icon图标
+  for (const iconName in ElIconModules) {
+    app.component(ElIconModules[iconName].name, ElIconModules[iconName].render());
+  }
 
   app.use(ElementPlus);
   // 全局配置
